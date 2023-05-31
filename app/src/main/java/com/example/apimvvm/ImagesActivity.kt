@@ -4,19 +4,23 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.apimvvm.databinding.ActivityImagesBinding
+import com.example.apimvvm.databinding.ActivityMainBinding
 
 
 class ImagesActivity : AppCompatActivity() {
+    lateinit var binding : ActivityImagesBinding
 
     private lateinit var imagesViewModel: ImagesViewModel
     private lateinit var imagesAdapter: ImagesAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_images)
+        binding = ActivityImagesBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         imagesAdapter = ImagesAdapter()
-        imagesRecyclerView.apply {
+        binding.imagesRecyclerView.apply {
             layoutManager = LinearLayoutManager(this@ImagesActivity)
             adapter = imagesAdapter
         }
