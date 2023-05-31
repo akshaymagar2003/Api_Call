@@ -18,4 +18,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, ImagesActivity::class.java))
         }
     }
+
+
 }
