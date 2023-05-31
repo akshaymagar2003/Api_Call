@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.apimvvm.databinding.ActivityImagesBinding
-import com.example.apimvvm.databinding.ActivityMainBinding
 
 
 class ImagesActivity : AppCompatActivity() {
